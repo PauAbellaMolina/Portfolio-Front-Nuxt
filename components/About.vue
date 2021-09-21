@@ -4,9 +4,6 @@
       <p>About</p>
     </div>
     <div class="mc-about-content" v-html="abouttexts">
-      <!-- <p>I am a 19 year old guy based in Reus, a city near the every time more techie Barcelona.</p>
-      <p>I love climbing, surfing and coding.</p>
-      <p>I also enjoy designing and sketching webpages, logos, posters, cd covers... from time to time but I consider myself much more of a developer than a designer.</p> -->
       {{ abouttexts }}
     </div>
   </span>

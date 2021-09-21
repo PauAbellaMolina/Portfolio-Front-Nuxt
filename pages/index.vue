@@ -8,8 +8,6 @@
         <p>PAU ABELLA</p>
       </div>
       <div class="sub-heading">
-        <!-- <p>I am a Junior Software Developer highly passionate about engineering and design.</p>
-        <p>Making cool things fast and pretty is the goal.</p> -->
         <p v-if="$fetchState.pending">...</p>
         <p v-else-if="$fetchState.error">:(</p>
         <div v-else v-html="maintexts[0].subheading"> {{ maintexts[0].subheading }}</div>
@@ -18,6 +16,8 @@
 
     <div class="main-content">
       <About :abouttexts="maintexts[0].about" />
+      <Projects />
+      <Footer />
     </div>
   </span>
 </template>
@@ -72,6 +72,33 @@ p {
   font-family: 'Playfair Display', serif !important;
 }
 
+.underline-gradient {
+  border-style: solid;
+  border-width: 0 0 .28vw 0;
+  border-image: linear-gradient(90deg, #9D6A06, #910330, #5E0BBD, #00698E) 1;
+  display: inline-block;
+  line-height: 37px;
+}
+
+a {
+  -moz-transition: all .1s;
+  -webkit-transition: all .1s;
+  -o-transition: all .1s;
+  transition: all .1s;
+}
+  a:hover {
+    /* font-style: italic; */
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+
+::selection, ::moz-selection {
+  color: black;
+  background-color: white;
+}
+
 .top-heading p {
   font-size: 7.6vw;
   line-height: 130%;
@@ -82,6 +109,13 @@ p {
   font-size: 36vw;
   text-align: center;
   line-height: 105%;
+
+  background: -webkit-linear-gradient(0deg, #9D6A06, #910330, #5E0BBD, #00698E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main-heading p::selection, .main-heading p::moz-selection {
+  -webkit-text-fill-color: black;
 }
 .sub-heading p {
   font-size: 1.82vw;
@@ -90,6 +124,6 @@ p {
 
 .main-content {
   margin-top: 8vw;
-  padding: 0 10vw 0 10vw;
+  padding: 0 15vw 0 15vw; /* <--"lateral bands" */
 }
 </style>
