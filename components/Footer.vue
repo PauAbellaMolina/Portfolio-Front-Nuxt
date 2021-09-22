@@ -58,5 +58,6 @@ export default {
 }
   .footer-sublogo p {
     color: #131313;
+    font-size: .9vw;
   }
 </style>

@@ -77,7 +77,11 @@ p {
   border-width: 0 0 .28vw 0;
   border-image: linear-gradient(90deg, #9D6A06, #910330, #5E0BBD, #00698E) 1;
   display: inline-block;
-  line-height: 37px;
+  line-height: 2vw;
+}
+
+.line-container {
+  padding: 1.3vw 0 0 2.3vw;
 }
 
 a {
