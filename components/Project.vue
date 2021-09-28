@@ -1,9 +1,11 @@
 <template>
   <div class="parent-box flex flex-row">
-    <div class="image" />
+    <div class="image">
+      <img :src="project.cover_image">
+    </div>
     <div class="project-info flex flex-col">
       <div class="pi-main">
-        <p class="pi-main-title playfair">
+        <p class="pi-main-title playfair" :style="style">
           {{ project.title }}
         </p>
         <p class="pi-main-text" v-html="project.description_1">
@@ -88,7 +90,12 @@
 
 <script>
 export default {
-  props: ['project']
+  props: ['project'],
+  computed: {
+    style () {
+      return 'font-size: ' + this.project.title_font_size + 'vw'
+    }
+  }
 }
 </script>
 
@@ -106,15 +113,17 @@ export default {
   }
   .project-info {
     width: 50%;
-    padding: 2vw 5vw 2vw 5vw;
+    /* padding: 2vw 5vw 2vw 5vw; */
     display: flex;
     align-items: center;
   }
     .pi-main {
-
+      padding: 2vw 0 2vw 0;
+      width: 24vw;
     }
       .pi-main-title {
         font-size: 4vw;
+        white-space: nowrap;
       }
       .pi-main-text {
         margin: 0 0 1vw 0;
@@ -123,7 +132,7 @@ export default {
         line-height: 115%;
       }
     .pi-additional {
-      width: 100%;
+      width: 24vw;
     }
     .pi-additional-left, .pi-additional-right {
       width: 50%;
