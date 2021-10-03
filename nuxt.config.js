@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'PortfolioFRONT',
+    title: 'Pau Abella',
     htmlAttrs: {
       lang: 'en'
     },
@@ -16,7 +16,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    bodyAttrs: {
+      class: 'body'
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
