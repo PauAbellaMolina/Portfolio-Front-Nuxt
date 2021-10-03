@@ -31,7 +31,7 @@ export default {
   },
   async fetch () {
     this.maintexts = await fetch(
-      'http://localhost:3030/main-texts'
+      'https://pauabella-portfolio-api.herokuapp.com/main-texts'
     ).then(res => res.json())
   },
   head () {

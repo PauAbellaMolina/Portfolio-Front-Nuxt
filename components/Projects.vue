@@ -49,7 +49,7 @@ export default {
   },
   async fetch () {
     this.projects = await fetch(
-      'http://localhost:3030/projects'
+      'https://pauabella-portfolio-api.herokuapp.com/projects'
     ).then(res => res.json())
   }
 }
