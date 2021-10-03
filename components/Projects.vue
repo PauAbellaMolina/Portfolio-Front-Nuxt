@@ -34,7 +34,9 @@
     <p v-else-if="$fetchState.error">:(</p>
     <div v-else class="project-list">
       <div v-for="project of projects" :key="project.id">
-        <Project :project="project" />
+        <no-ssr>
+          <Project :project="project" />
+        </no-ssr>
       </div>
     </div>
   </span>
