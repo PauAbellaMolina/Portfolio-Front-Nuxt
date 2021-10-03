@@ -15,11 +15,9 @@
     </span>
 
     <div class="main-content">
-      <client-only>
-        <About :abouttexts="maintexts[0].about" />
-        <Projects />
-        <Footer />
-      </client-only>
+      <About :abouttexts="maintexts[0].about" />
+      <Projects />
+      <Footer />
     </div>
   </span>
 </template>
