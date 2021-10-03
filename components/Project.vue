@@ -1,7 +1,7 @@
 <template>
   <div class="parent-box flex flex-row">
     <div class="image">
-      <img :src="project.cover_image">
+      <img :src="'data:image/jpeg;base64,'+project.cover_image">
     </div>
     <div class="project-info flex flex-col">
       <div class="pi-main">
@@ -111,6 +111,12 @@ export default {
     border-radius: inherit;
     width: 50%;
   }
+    .image img {
+      border-radius: inherit;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   .project-info {
     width: 50%;
     /* padding: 2vw 5vw 2vw 5vw; */
