@@ -15,11 +15,11 @@
     </span>
 
     <div class="main-content">
-      <no-ssr>
+      <client-only>
         <About :abouttexts="maintexts[0].about" />
         <Projects />
         <Footer />
-      </no-ssr>
+      </client-only>
     </div>
   </span>
 </template>
