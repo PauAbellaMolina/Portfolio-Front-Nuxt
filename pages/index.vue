@@ -15,9 +15,11 @@
     </span>
 
     <div class="main-content">
-      <About :abouttexts="maintexts[0].about" />
-      <Projects />
-      <Footer />
+      <no-ssr>
+        <About :abouttexts="maintexts[0].about" />
+        <Projects />
+        <Footer />
+      </no-ssr>
     </div>
   </span>
 </template>
