@@ -1,5 +1,5 @@
 <template>
-  <span class="parent flex flex-col">
+  <span id="js-scroll" class="flex flex-col">
     <span class="flex flex-col">
       <div class="top-heading playfair">
         <p>Hi. My name is</p>
@@ -26,7 +26,8 @@
 export default {
   data () {
     return {
-      maintexts: []
+      maintexts: [],
+      lmS: null
     }
   },
   async fetch () {
@@ -43,6 +44,13 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    // eslint-disable-next-line new-cap
+    this.lmS = new this.locomotiveScroll({
+      el: document.querySelector('#js-scroll'),
+      smooth: true
+    })
   }
 }
 </script>
