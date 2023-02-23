@@ -26,7 +26,7 @@
       </svg>
       <span class="footer-sublogo flex flex-col items-center">
         <p>Designed and coded by me</p>
-        <p>2022</p>
+        <p>2023</p>
       </span>
     </span>
   </span>
