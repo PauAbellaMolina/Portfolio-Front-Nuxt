@@ -1,7 +1,7 @@
-# Portfolio Front
+# Pau Abella Nuxt Portfolio
 
 A NuxtJS Front of my new portfolio.
 
 Deployed on Netlify as a static Nuxt SSR site
 
-Check it out here -> [pauabella.dev](https://pauabella.dev "Take a look")
+Replaced by [this one](https://github.com/PauAbellaMolina/Pau-Portfolio-React)
